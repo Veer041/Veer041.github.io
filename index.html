@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Veer Singh Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html"> Veer Singh </a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/pfp1.jpeg);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Veer Singh</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'IIM Student',
+						'Business Analytics  ',
+						'Data Analysis',
+						'AI/Machine Learning',
+						'Finance Enthusiast',
+						'Data Visualization',
+						'Content Creator',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Business Analyst</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p> <a href="https://github.com/Veer041" class="btn btn-white btn-outline-white py-3 px-4">My work</a></p> 
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about_me.jpeg" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span> Veer Singh </span></p>
+										<p><span class="title-s">B-School: </span> <span>IIM,Amritsar</span></p>
+										<p><span class="title-s">Profile: </span> <span>Business Analytics</span></p>
+										<p><span class="title-s">Address: </span> <span>Amritsar, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>PYTHON</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span> AI/Machine Learning </span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p> I am currently pursuing an MBA in Business Analytics from IIM Amritsar, where I have honed my skills in AI, machine learning, and advanced data analysis techniques. With a background in Mechanical Engineering from Thapar Institute, I bring a strong foundation in problem-solving and analytical thinking. As a Business Analytics intern at Punjab Agro, I developed and automated task management systems, delivering cost savings and optimizing data collection processes. My expertise in tools such as Power BI, Tableau, SQL, R, Python, and Excel allows me to transform complex datasets into actionable insights, driving strategic decision-making and process improvements. During my internships and projects, I have built interactive dashboards, streamlined operations, and conducted market research across industries. I have also performed detailed financial modeling, equity research, and technical analysis, providing recommendations based on key indicators and trends. My ability to analyze data and deliver real-time performance insights has led to significant productivity gains. I am passionate about leveraging data, AI, and machine learning to optimize processes, improve customer experiences, and drive business growth. Let’s collaborate to harness the power of data for actionable insights and business success.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Business Analytics</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Masters of Business Administration (MBA- Business Analytics) (2023-25), Bachelor of Engineering (Mechanical) (2018-22)</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Punjabi</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Tableau</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span> Excel, SQL, Python,R </span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Playing Football, Watching Documentries</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="5">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/veer-singh-89391a294/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Experienced in transforming data into actionable insights, with strong skills in data visualization, statistical analysis, and effective communication with both technical and non-technical teams. Proficient in using tools to drive business growth and optimize performance..</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">August /2024-September /2024</span>
+					<h2>Stragetic Consulting Intern</h2>
+					<span class="position">Takshashila Consulting</span>
+
+						<ul>
+							<li>Led strategic planning to double Baghpat's GDP, prioritizing infrastructure, industry, and education within 5 years.</li>
+							<li>Conducted SWOT analysis and issue prioritization using the Pareto Principle, identifying key focus areas such as infrastructure, employment generation, and industrial diversification, resulting in actionable solutions for economic growth.</li>
+							<li>Proposed and implemented bridge plans to enhance connectivity, digital access, and healthcare facilities in Baghpat, including the expansion of 300 km of roads and high-speed internet coverage in rural areas to stimulate development.</li>
+						</ul>
+					</p>
+				</div>
+			</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">April /2024-June /2024</span>
+						<h2>Business Analyst Intern</h2>
+						<span class="position">Punjab Agri Export Corporation Limited</span>
+ 
+							<ul>
+								<li>Automated Task Management & Cost Savings: Designed an in-house automated task management system with email reminders, recurring tasks, and progress tracking in Google Sheets, saving INR 3,00,000 annually by eliminating third-party software.</li>
+    							<li>Performance Dashboards: Developed real-time interactive dashboards (Google Sheets/Power BI) for departments and plants, enabling actionable insights and process optimization.</li>
+   								<li>Data Collection Optimization: Streamlined data collection from production plants by redesigning formats for accurate and efficient data capture, simplifying dashboard creation.</li>
+   								<li>Employee Training: Conducted training sessions to ensure smooth adoption of new systems, enhancing productivity and efficiency.</li>
+				
+							</ul>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">February /2024-March /2024</span>
+						<h2>Financial Analyst Intern</h2>
+						<span class="position">MS Advisory Pvt Ltd</span>
+	
+							<ul>
+								<li>Technical Expertise: Applied technical indicators like RSI, MA, MACD and identified key chart patterns like head & shoulders, double tops/bottoms etc to analyze and forecast stock price movements.</li>
+								<li>Comprehensive Analysis: Gained in-depth knowledge of fundamental analysis and technical analysis in equity markets, which includes technical indicators, identifying stock patterns and trend reversal patterns etc.</li>
+								<li>Generated comprehensive stock performance reports, combining fundamental & technical analysis for investment forecasts.</li>
+							</ul>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Oct/2023 - Nov/2023 </span>
+						<h2>Data Analytics Trainee </h2>
+						<span class="position">MedTour Easy</span>
+						
+							<ul>
+								<li> Analyzed sales data of a pizza store using SQL to extract insights on customer preferences, revenue generation, and order patterns, including total orders, revenue, and the most popular pizza types.</li>
+								<li> Developed an interactive sales dashboard in Power BI, visualizing key metrics such as peak order times, top-selling pizzas, and sales distribution by day, facilitating data-driven decision-making for marketing and inventory strategies.</li>
+								<li> Performed detailed data aggregation and analysis to determine pizza category performance, identifying the top revenue-generating items and order distribution, ultimately enhancing understanding of product demand and customer behavior.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2023-2025</span>
+    					<h2>Masters of Business Administration</h2>
+    					<span class="position"> Indian Institute of Management, Amritsar </span>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2018-2022</span>
+    					<h2>Bachelor of Engineering</h2>
+    					<span class="position"> Thapar Institute of Engineering and Technology, Patiala</span>
+    				</div>
+				</div>
+
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="images/veeeer.pdf" class="btn btn-primary py-4 px-5">Download Resume</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Data Analytics Projects</h1>
+            <h2 class="mb-4">Data Analytics Projects</h2>
+            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI .</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/Veer041/PowerBI-Projects/tree/main/Swiggy_DataAnalysis_Proejct" class="block-20 zoom-effect" style="background-image: url('images/swiggy.png ');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/Veer041/PowerBI-Projects/tree/main/Swiggy_DataAnalysis_Proejct">Swiggy Data Analysis using Power BI</a></h3>
+				  <p>Developed and implemented a comprehensive Power BI dashboard to analyze and visualize swiggy sales and orders data. Key insights included most ordered dishes, customer preferences, most revenue generating restaurants, busiest hours and order status.</p>
+				</div>
+			  </div>
+			</div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Veer041/PowerBI-Projects/tree/main/Dairy%20Goods%20Sales" class="block-20 zoom-effect" style="background-image: url('images/proj2.png ');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Veer041/PowerBI-Projects/tree/main/Dairy%20Goods%20Sales">Dairy Good Sales Analysis using Power BI</a></h3>
+                <p>Developed and implemented a comprehensive Power BI dashboard to analyze and visualize dairy goods sales data. Key insights included top-selling products, customer preferences, distribution channel performance, and the impact of shelf life on product sales.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Veer041/PowerBI-Projects/tree/main/Classic%20Models%20PowerBI" class="block-20 zoom-effect" style="background-image: url('images/proj1.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Veer041/PowerBI-Projects/tree/main/Classic%20Models%20PowerBI"> Pizza Store Sales Analysis using Power BI </a></h3>
+                <p>Developed and implemented a comprehensive Power BI dashboard to analyze and visualize pizza sales data. Key insights included top-selling pizzas, revenue generation, order trends by day, time, and hour, and customer preferences.</p>
+              </div>
+            </div>
+          </div>
+		  <div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/Veer041/SQL-Projects/tree/main/Pizza%20Store%20SQL%20Project" class="block-20 zoom-effect" style="background-image: url('images/proj3.png');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/Veer041/SQL-Projects/tree/main/Pizza%20Store%20SQL%20Project"> Pizza Store Sales Analysis using SQL </a></h3>
+			  <p>Leveraged advanced SQL queries to analyze and extract meaningful insights from pizza sales data. Key findings included top-selling pizzas, revenue generation, order trends by day, time, and hour, and customer preferences.</p>
+			</div>
+		  </div>
+		</div>
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/Veer041/Python-EDA-Project/tree/main/Telecom%20Churn%20EDA%20Project" class="block-20 zoom-effect" style="background-image: url('images/proj5.png');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/Veer041/Python-EDA-Project/tree/main/Telecom%20Churn%20EDA%20Project"> Telecom Customer Churn Exploratory Data Analysis using Python , Power Bi And SQL Project </a></h3>
+			  <p>Employed advanced Python libraries (NumPy, Pandas, Matplotlib, Seaborn) to conduct exploratory data analysis on telecom customer churn data. Key tasks included data loading, cleaning, and visualization.
+			  </p>
+			</div>
+		  </div>
+		</div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Veer041/SQL-Projects/tree/main/Netflix%20DataAnalysis%20SQL%20Project" class="block-20 zoom-effect" style="background-image: url('images/proj4.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Veer041/SQL-Projects/tree/main/Netflix%20DataAnalysis%20SQL%20Project">Netflix Data Analysis using SQL .</a></h3>
+                <p>Utilized SQL to conduct a comprehensive analysis of Netflix data, extracting valuable insights into customer behavior, content popularity. Key tasks included data cleaning, aggregation, and querying to identify top-rated shows, popular genres.
+				</p>
+              </div>
+            </div>
+		</div>
+     </div>
+	</section>
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+		  <div class="row justify-content-center mb-5 pb-5">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Other Projects</h1>
+			  <h2 class="mb-4">Other Projects</h2>
+			  <p>Below are the sample projects based on finance & consulting domain .</p>
+			</div>
+		  </div>
+		  <div class="row d-flex">
+			  <div class="col-md-4 d-flex ftco-animate">
+				  <div class="blog-entry justify-content-end">
+				  <a href="https://github.com/Veer041/Coca-Cola-Strategic-Consulting-Project" class="block-20 zoom-effect" style="background-image: url('images/coca-cola-logo-1941.jpg');">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+	
+					<h3 class="heading"><a href="https://github.com/Veer041/Coca-Cola-Strategic-Consulting-Project">Coca Cola Strategic Consulting Project</a></h3>
+					<p>Conducted strategic analysis for The Coca-Cola Company, covering industry overview, compeve landscape. Assessed product strategies using 4P framework, analyzing market segments, channels, and compeve strategies. Analyzed Coca-Cola's business model, idenfying growth opportunies and future strategies.</p>
+				  </div>
+				</div>
+			  </div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/Veer041/Financial-Modelling-Project" class="block-20 zoom-effect" style="background-image: url('images/srf-limited9835.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/Veer041/Financial-Modelling-Project">SRF Limited Financial Modelling</a></h3>
+				  <p>Developed a comprehensive 3-year financial forecasng model for SRF Ltd, incorporating a 10% revenue growth rate and relevant assumptions, and conducted descriptive statistical analysis for NIFTY and SRF Ltd's share price. Formulated a predictive equation for SRF Ltd's share price using regression analysis, ensuring model accuracy through residual calculations, and assessed market risk by calculating beta and Value at Risk (VaR).</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/Veer041/Equity-Research-Project" class="block-20 zoom-effect" style="background-image: url('images/concordbio.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/Veer041/Equity-Research-Project">Concord Biotech Equity Research Project</a></h3>
+				  <p>Conducted equity research for Concord Biotech, analyzing financial ratios, shareholding patterns, SWOT, and Porter's five forces, and provided a buy/sell/hold recommendation with future prospects. Performed technical analysis on Concord Biotech's stock, examining price movements, key indicators (MA, RSI, MACD), chart patterns, and volume data, providing a forecast and trading strategy.</p>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+   </section>
+
+ </div>
+ <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+	<div class="container">
+	  <div class="row d-md-flex align-items-center">
+		<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		  <div class="block-18">
+			<div class="text">
+			  <strong class="number" data-number="10">0</strong> <span>+</span>
+			  <span>Achievements</span>
+			</div>
+		  </div>
+		</div>
+		<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		  <div class="block-18">
+			<div class="text">
+			  <strong class="number" data-number="10">0</strong> <span>+</span>
+			  <span>Projects</span>
+			</div>
+		  </div>
+		</div>
+		<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		  <div class="block-18">
+			<div class="text">
+			  <strong class="number" data-number="100">0</strong>
+			  <span>Cups of coffee</span>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  
+	<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+		  <!-- <div class="container"> -->
+			  <div class="row justify-content-center">
+				  <div class="col-md-7 ftco-animate text-center">
+					  <h2>More projects on<span> Github  </span> </h2>
+					  <div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+					  <br>
+					  <p><a href="https://github.com/Veer041" class="btn btn-primary py-3 px-5">GitHub</a></p>
+					  </div>
+				  </div>
+			  </div>
+		  <!-- </div> -->
+	  </div>
+  </section>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Amritsar, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 - 7009953821</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">veer.mbaba03@iimamritsar.ac.in</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="images/veeeer.pdf">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSctuhI2Ov9iUCkuRhe9J7LvFySHQKS0-en7uIhz33tCtO7FUg/viewform?usp=sf_link" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/veer-singh-89391a294/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://github.com/Veer041"><span class="icon-github"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
